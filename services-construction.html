@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content=""/> 
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>isDesign</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="layout">
+
+    <!-- Header -->
+
+    <header>
+        <div class="holder">   
+            <a href="#" role="banner" class="logo"><img src="assets/images/main2.png" alt="isDesign"></a>
+            <!-- Desktop-menu -->
+            <nav class="main-menu" id="menu-holder">
+                <ul>
+                    <li><a href="/index.html">Главная</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle active" href="#">Услуги</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Индивидуальное проектирование</a></li>
+                            <li><a href="services-construction.html">Строительство</a></li>
+                            <li><a href="services-overhaul.html">Капитальный ремонт</a></li>
+                            <li><a href="services-interior-design.html">Дизайн интерьера</a></li>
+                            <li><a href="#">Внутренняя отделка</a></li>
+                            <li><a href="services-agreement.html">Инжиниринг</a></li>
+                        </ul>
+                    </li> 
+                    <li><a href="projects.html">Проекты</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contact.html">Контакты</a></li>  
+                </ul>       
+            </nav>
+            <a href="tel:+420732567373" id="phone-number">+420 732 567 373</a>
+            <div id="advice"><a href="#modal-gift" class="js-modal-link">Получить консультацию</a></div>
+            <ul class="language-wrap">        
+                <li title="Russian"><a class="lang active" lang="ru" href="#">Ру</a></li>
+                <li title="Czech"><a class="lang" lang="cz" href="#">Cz</a></li>
+                <li title="English"><a class="lang" lang="en" href="#">En</a></li>        
+            </ul>   
+        </div>   
+    </header>
+
+    <!-- main section -->
+
+    <section class="projects-main" style="background-image: url('assets/images/services1-main.png');">
+        <div class="holder-wrap">
+            <h1>Индивидуальное строительство под ключ</h1>
+            <button class="btn">Получить расчет стоимости<span><img src="assets/images/arrow-right-white.svg" alt="#"></span></button>
+        </div>
+    </section>
+
+    <!-- status section -->
+
+    <section class="holder-wrap status">
+        <ul>
+            <li><span><img src="assets/images/services-status-icon1.png" alt="#"></span>Один генподрядчик на все работы</li>
+            <li><span><img src="assets/images/services1-status-icon2.png" alt="#"></span>Высокие стандарты отделочных работ</li>
+            <li><span><img src="assets/images/services-status-icon3.png" alt="#"></span>Команда разговаривает на русском языке</li>
+        </ul>
+    </section>
+
+    <!--projects section -->
+
+    <section class="projects-items">
+        <h2>Проекты</h2>
+        <div class="projects-wrap holder-wrap">
+            <div class="projects-item">
+                <a href="photo.html" class="projects-item-photo"><img src="assets/images/services1-img1.png" alt="#"></a>
+                <div class="text-item">
+                    <a href="photo.html"><p>Гостевой дом с бассейном в Карловых Варах</p></a>
+                    <a href="photo.html"><button class="btn">Подробнее<span><img src="assets/images/arrow-right-white.svg" alt="#"></span></button></a>
+                </div>
+            </div>
+            <div class="projects-item">
+                <div class="text-item">
+                    <a href="photo.html"><p>Дом в Tachlovice, Прага - Запад</p></a>
+                    <a href="photo.html"><button class="btn">Подробнее<span><img src="assets/images/arrow-right-white.svg" alt="#"></span></button></a>
+                </div>
+                <a href="photo.html" class="projects-item-photo"><img src="assets/images/services1-img2.png" alt="#"></a>
+            </div>
+            <div class="projects-item">
+                <a href="photo.html" class="projects-item-photo"><img src="assets/images/services1-img3.png" alt="#"></a>
+                <div class="text-item">
+                    <a href="photo.html"><p>Дом в Карловых Варах.</p></a>
+                    <a href="photo.html"><button class="btn">Подробнее<span><img src="assets/images/arrow-right-white.svg" alt="#"></span></button></a>
+                </div>           
+            </div>
+        </div>
+        <a href="#" class="more">Показать еще</a>
+    </section>
+
+    <!--contact section-->
+
+    <section class="contact holder-wrap">
+        <h2>Закажите бесплатный выезд архитектора</h2>
+        <div class="contact-wrap" id="contacts">
+            <div class="contact-img">
+                <img src="assets/images/services-contact.png" alt="#">
+            </div>
+            <div class="contact-form">
+                <h4>Наш архитектор Сергей приедет и ответит на все вопросы о вашем будущем ремонте</h4>  
+                <form id="form">
+                    <input required type="name" placeholder="Имя" name="name">
+                    <input required type="tel" placeholder="Телефон" name="phone">
+                    <button class="btn" type="submit" onclick="showModal('#contacts');">Вызвать архитектора</button>
+                </form>
+            </div>
+            <div class="text-form">
+                <img src="assets/images/modal-thanks-img.png" alt="#">
+                <h4>Спасибо!<br/><span>Мы уже получили Вашу заявку и скоро свяжемся по указанному номеру</span></h4>     
+            </div>
+        </div>
+    </section>
+
+    <!--const-stages section-->
+
+    <section class="const-stages">
+        <h2>Работы в рамках строительства под ключ</h2>
+        <div class="const-stages-wrap">
+            <div class="const-item">
+                <div class="image"><img src="assets/images/services1-icon1.svg" alt="#"></div>
+                <div class="const-item-text">
+                    <h4>Геологическое исследование</h4>
+                    <p>Короткий текст описывающий процесс проведения этой работы и пояснение необходимости этой работы</p>
+                </div>
+            </div>
+            <div class="const-item">
+                <div class="image"><img src="assets/images/services1-icon2.svg" alt="#"></div>
+                <div class="const-item-text">
+                    <h4>Архитектурно-строительный проект</h4>
+                    <p>Короткий текст описывающий процесс проведения этой работы и пояснение необходимости этой работы</p>
+                </div>
+            </div>
+            <div class="const-item">
+                <div class="image"><img src="assets/images/services1-icon3.svg" alt="#"></div>
+                <div class="const-item-text">
+                    <h4>Дизайн-проект интерьера</h4>
+                    <p>Короткий текст описывающий процесс проведения этой работы и пояснение необходимости этой работы</p>
+                </div>
+            </div>
+            <div class="const-item">
+                <div class="image"><img src="assets/images/services1-icon4.svg" alt="#"></div>
+                <div class="const-item-text">
+                    <h4>Ландшафтные работы</h4>
+                    <p>Короткий текст описывающий процесс проведения этой работы и пояснение необходимости этой работы</p>
+                </div>
+            </div>
+            <div class="const-item">
+                <div class="image"><img src="assets/images/services1-icon5.svg" alt="#"></div>
+                <div class="const-item-text">
+                    <h4>Обустройство дома </h4>
+                    <p>Короткий текст описывающий процесс проведения этой работы и пояснение необходимости этой работы</p>
+                </div>
+            </div>  
+        </div>
+
+        <div class="bonus holder">
+            <div class="bonus-span">Бонус</div>
+            <div class="bonus-frame">
+                <p>При заказе строительства дома под ключ, <br/>дизайн-проект интерьера вы получаете в подарок</p>
+                <button class="btn"><a href="#modal-gift" class="js-modal-link">Оставить заявку<span><img src="assets/images/arrow-right-white.svg" alt="#"></span></a></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- stages section, about section -->
+
+    <section class="stages construction-stages">
+        <div class="stages-wrap">
+            <h2>Этапы строительства дома</h2>
+            <ul class="holder">
+                <li><span>01</span><p>Встречаемся и обсуждаем пожелания к дому<br/><span class="small-li-text">Размеры дома, расположение на участке, этажность, количество жилых помещений, требования к фасаду, пожелания к планировке участка и т.д.</span></p></li> 
+                <li><span>02</span>На участок выезжает технический специалист для определения возможности строительства дома согласно предварительным пожеланиям Заказчика.</li>
+                <li><span>03</span>Подписываем договор по проектным работам и разрабатываем проектное предложение на дом для предварительного согласования с Заказчиком и в разрешительных органах.</li>
+                <li><span>04</span>Разрабатываем архитектурно-строительный проект для получения разрешения на строительство</li>
+                <li><span>05</span>Разрабатываем дизайн проект интерьера дома с пожеланиями к интерьеру дома в виде технического задания</li>
+                <li><span>06</span>Разрабатываем сметную документацию и подписание  договора на проведение строительных, монтажных и отделочных работ на ее основании</li>   
+            </ul>
+        </div>
+        <div class="more"><a href="#">Показать все этапы</a></div>
+        <div class="about holder">
+            <div class="main-card">
+                <div class="photo">
+                    <img src="assets/images/about1.png" alt="#">
+                </div>
+                <div class="about-text">
+                    <h2>Компания</h2>
+                    <p>Рассказываем от первого лица генерального директора про подход в компании к работе, к сотрудникам, про качество обслуживания клиентов и другие моменты, отвечающие на вопрос, почему нужно выбрать вашу компанию.</p> 
+                    <div class="name">
+                        <img src="assets/images/about-sign.png" alt="#">   
+                        <p class="sign">Сергей Войтенко<br/><span>Директор</span></p> 
+                    </div> 
+                </div>
+            </div>
+            <div class="js-slider" data-mobile="true" data-adaptive="true" data-dots="true">
+                <div class="li card">
+                    <img src="assets/images/about2.png" alt="#">
+                    <p>Инна Войтенко<br/><span>Архитектор-дизайнер</span></p> 
+                </div>
+                <div class="li card">
+                    <img src="assets/images/about3.png" alt="#">
+                    <p>Владимир Музыка<br/><span>Главный инженер по строительству</span></p> 
+                </div>
+                <div class="li card">
+                    <img src="assets/images/about4.png" alt="#">
+                    <p>Жанна Погорелова<br/><span>Маркетинг</span></p> 
+                </div>
+                <div class="li card">
+                    <img src="assets/images/about5.png" alt="#">
+                    <p>Сергей Бондаревский<br/><span>Дизайнер</span></p> 
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <!-- our partners section -->
+
+    <section>
+        <div class="holder partners">
+            <h2>Наши партнеры</h2>
+            <div class="swipe-slider">
+                <ul class="swipe-slidеs js-slider" data-adaptive="true" data-arrows="true" data-dots="true">
+                    <li class="item"><img src="assets/images/partners2.png" alt="#"></li>
+                    <li class="item"><img src="assets/images/partners3.png" alt="#"></li>
+                    <li class="item"><img src="assets/images/partners5.png" alt="#"></li>   
+                    <li class="item"><img src="assets/images/partners4.png" alt="#"></li>
+                    <li class="item"><img src="assets/images/partners1.png" alt="#"></li>                    
+                    <li class="item"><img src="assets/images/partners5.png" alt="#"></li>
+                    <li class="item"><img src="assets/images/partners4.png" alt="#"></li>
+                    <li class="item"><img src="assets/images/partners1.png" alt="#"></li>                 
+                </ul>
+            </div>
+        </div>
+    </section>
+ 
+     <!--instagram section -->
+ 
+    <section>
+        <div id="inst">
+            <h2>Наш Instagram</h2>
+            <div class="inst-photo">
+                <div class="photo">
+                    <img src="assets/images/inst.png" alt="#">
+                    <img src="assets/images/inst2.png" alt="#">
+                    <img src="assets/images/inst3.png" alt="#">
+                    <img src="assets/images/inst4.png" alt="#">
+                    <img src="assets/images/inst4.png" alt="#">
+                    <img src="assets/images/inst4.png" alt="#">
+                    <img src="assets/images/inst4.png" alt="#">
+                    <img src="assets/images/inst4.png" alt="#">
+                </div>
+            </div>
+            <button class="btn">Смотреть<span><img src="assets/images/arrow-right-white.svg" alt="#"></span></button>
+        </div>
+    </section>
+ 
+     <!--location section -->
+ 
+    <section id="location">
+        <div class="holder">
+            <h2>Контакты</h2>
+            <p>Babická 2345/3, Praha 4 - Chodov, 149 00, Czech Republic</p>
+            <p id="tel"><a href="tel:+420732567373">+420 732 567 373</a><br/><a href="tel:+420724705135">+420 724 705 135</a></p>
+            <div class="social">			
+                <a href="#">
+                <img src="assets/images/inst-icon.svg" alt="#">
+                </a>         
+                <a href="#">
+                <img src="assets/images/facebook-icon.svg" alt="#">
+                </a>  
+                <a href="#">
+                <img src="assets/images/vk-icon.svg" alt="#">
+                </a>				
+            </div>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.561841771928!2d14.495627272519314!3d50.03982998383243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b924a7ba6d611%3A0x2b378f599a45e71d!2zQmFiaWNrw6EgMjM0NS8zLCAxNDkgMDAgUHJhaGEgMTEtQ2hvZG92LCDQp9C10YXQuNGP!5e0!3m2!1sru!2sru!4v1569509704699!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>   
+        </div>
+    </section>
+ </div>
+ 
+ <!-- Footer -->
+ 
+ <footer class="site-footer" role="contentinfo">
+     <div class="holder">
+         <div class="footer-top">
+             <div id="copyright">© 2009-2019</div>
+             <img src="assets/images/main2.png" alt="isDesign" id="footer-logo">
+             <div id="direction">Архитектурно-строительная компания ISDesign group s.r.o.</div>
+         </div>
+         <ul class="footer-top-link">
+             <li><a href="#">Обработка персональных данных</a></li>
+             <li><a href="#">Карта сайта</a></li>
+             <li><a href="#modal-feedback" class="js-modal-link">Обратная связь</a></li>        
+         </ul>  
+     </div>
+  
+     <div class="footer-bottom">
+         <div class="holder">
+             <ul class="footer-link">
+                <li><a href="#">Индивидуальное проектирование</a></li>
+                <li><a href="services-construction.html">Строительство</a></li>
+                <li><a href="services-overhaul.html">Капитальный ремонт</a></li>
+                <li><a href="services-interior-design.html">Дизайн интерьера</a></li>
+                <li><a href="#">Внутренняя отделка</a></li>
+                <li><a href="services-agreement.html">Инжиниринг</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+             </ul>
+         </div> 
+     </div>
+ </footer>
+
+ <!-- Modals -->
+
+    <div class="modal-fadeout"></div>
+    <div class="modal-wrapper" id="modal-consultation">
+        <div class="modal">
+            <div class="contents">
+                <div class="modal-close" title="Close"></div>
+                <div class="h1">Получить консультацию</div>             
+                <form action="#" method="post" class="form">
+                    <input required type="text" name="name" maxlength="255" value="" placeholder="Имя">
+                    <input required type="tel" name="tel" maxlength="255" value="" data-mask="tel" placeholder="Телефон">
+                    <textarea class="js-autoheight" required type="text" name="question" value="" placeholder="Вопрос коротко"></textarea>
+                    <div class="cb-line"><input type="checkbox" name="agree" id="modal-target-agree"><label for="modal-target-agree">Я даю согласие на обработку своих<br/><u><a href="privacy-policy.html">персональных данных</a></u></label></div>
+                    <button class="btn" onclick="showModal('#modal-done'); return false;">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-wrapper" id="modal-done">
+        <div class="modal-thanks modal">
+            <div class="contents">
+                <div class="modal-close" title="Close"></div>
+                <img src="assets/images/modal-thanks-img.png" alt="#">
+                <div class="h1">Спасибо!</div>
+                <p>Мы уже получили Вашу заявку и скоро свяжемся по указанному номеру</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-wrapper" id="modal-feedback">   
+        <div class="modal-feedback modal">
+            <div class="contents">
+                <div class="modal-close" title="Close"></div>
+                <div class="h1">Обратная связь</div>
+                <form id="form" method="post" class="form">
+                    <input required type="text" name="name" maxlength="255" value="" placeholder="Имя">
+                    <input required type="tel" name="tel" maxlength="255" value="" data-mask="tel" placeholder="Телефон">
+                    <textarea class="js-autoheight" required type="text" name="question" value="" placeholder="Вопрос"></textarea>
+                    <div class="cb-line"><input type="checkbox" name="agree" id="modal-target-agree3"><label for="modal-target-agree3">Я даю согласие на обработку своих<br/><u><a href="privacy-policy.html">персональных данных</a></u></label></div>
+                    <button class="btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+ 
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+</body>
+</html>
