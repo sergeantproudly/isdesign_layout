@@ -1129,15 +1129,22 @@ section {
             & > ul {
                 display: block;
                 height: 100%;
+                position: relative;
 
                 & > li {
-                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                     height: 100%;
+                    width: 100%;
                     background-size: cover; 
                     background-position: center;
+                    opacity: 0; 
+                    @extend .transition-opacity;
 
                     &.active {
-                        display: block;
+                        opacity: 1;
+                        @extend .transition-opacity;
                     }
                 }
             }
@@ -1256,6 +1263,25 @@ section {
             width: 100%;
             display: flex;
 
+            @media (max-width: $adaptive-width-desktop-middle) {
+                .photo {
+                    width: 450px; 
+                    flex-basis: 450px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            @media (max-width: $adaptive-width-desktop-small) {
+                .photo {
+                    width: 320px;
+                    flex-basis: 320px;
+                    flex-shrink: 0;
+                }
+            }
+
             @media (max-width: $adaptive-width-tablet) {
                 flex-direction: column;
                 align-items: center;
@@ -1264,6 +1290,7 @@ section {
                 .photo {
                     width: 200px;
                     height: 200px;
+                    flex-basis: 200px;
                     background: url('../images/about1_mob.jpg') no-repeat center;
                     background-size: cover;
                     @include radius(200px);
@@ -1296,6 +1323,7 @@ section {
 
                 @media (max-width: $adaptive-width-desktop-small) {
                     padding-left: 35px; 
+                    width: auto;
                 }
 
                 @media (max-width: $adaptive-width-tablet) {
@@ -1311,7 +1339,7 @@ section {
 
                     @media (max-width: $adaptive-width-desktop-small) {
                         font-size: 42px;
-                        padding-top: 32px;
+                        padding-top: 12px;
                         margin-bottom: 25px;
                     }
 
@@ -1344,6 +1372,7 @@ section {
                         font-size: 18px;
                         line-height: 1.6;
                         padding-top: 0;
+                        width: auto;
                     }    
 
                     @media (max-width: $adaptive-width-tablet) {
@@ -1496,6 +1525,8 @@ section {
             margin-top: 77px;
             display: inline-block;
             max-width: 202px;
+            width: 25%;
+            margin-right: 15px;
 
             @media (max-width: $adaptive-width-tablet) {
                 margin-top: 45px;
@@ -2439,14 +2470,34 @@ section {
             }
         }
         .text-form {          
-            padding-left: 415px;
-            padding-top: 116px;
-            padding-bottom: 116px;
+            margin-left: 415px;
+            padding-top: 129px;
+            padding-bottom: 129px;
             text-align: left;
             display: none;
+
+            @media (max-width: $adaptive-width-desktop-middle) {
+                margin-left: 380px;
+            }
+
+            @media (max-width: $adaptive-width-tablet-middle) {
+                margin-left: 210px;
+                padding-right: 60px;
+            }
+
+            @media (max-width: $adaptive-width-tablet-small) {
+                margin-left: 0;
+                text-align: center;
+                padding: 0;
+            }
+
             img {
                 float: left;
                 margin-right: 24px;
+
+                @media (max-width: $adaptive-width-tablet-small) {
+                    display: none;
+                }
             }
             h4 {
                 font-style: normal;
@@ -2455,13 +2506,19 @@ section {
                 line-height: 28px;
                 color: #1E1E1E;
                 padding-top: 10px;
+                margin-left: 100px;
+
+                @media (max-width: $adaptive-width-tablet-small) {
+                    margin-left: 0;
+                    padding: 45px 0 60px;
+                }
+
                 span {
                     font-style: normal;
                     font-weight: 400;
                     font-size: 17px;
                     line-height: 21px;
                     color: #1E1E1E;
-
                 }
             }          
         }
@@ -3853,34 +3910,44 @@ section {
     .projects-info-header{
         text-align: center;
 
-        button {
-            margin: 40px 3px 65px;
-            background: inherit;
-            border: none;
-            padding: 15px 25px;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 16px;
-            line-height: 20px;
-            color: #848484;
-            font-family: 'Geometria', 'Arial';
-            border: 1px solid #fff;
-            cursor: pointer;
-            @extend .transition-all;
-            &.active {
-            border: 1px solid #9C8679;
-            color:#283039;
-            }
-            &:hover{
-            color:#283039;
-            }
+        ul {
+            display: block;
 
-            @media (max-width: $adaptive-width-tablet) {
-                margin: 20px 3px 45px;
-            }
+            & > li {
+                display: inline-block;
+                vertical-align: top;
+                margin: 40px 3px 65px;
 
-            @media (max-width: $adaptive-width-mobile) {
-                margin: 20px 3px 20px;
+                & > a {
+                    display: block;
+                    background: inherit;
+                    border: none;
+                    padding: 15px 25px;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #848484;
+                    border: 1px solid #fff;
+                    cursor: pointer;
+                    @extend .transition-all;
+
+                    &.tab-act {
+                        border: 1px solid #9C8679;
+                        color:#283039;
+                    }
+                    &:hover{
+                        color:#283039;
+                    }
+
+                    @media (max-width: $adaptive-width-tablet) {
+                        margin: 20px 3px 45px;
+                    }
+
+                    @media (max-width: $adaptive-width-mobile) {
+                        margin: 20px 3px 20px;
+                    }
+                }
             }
         }
     }
@@ -5317,7 +5384,7 @@ footer {
     overflow: hidden;
     line-height: 0;
     & > .contents {	
-		padding: 135px 124px 189px;  
+		padding: 100px 124px 150px;  
         width: 631px;
         background-color: #fff;
         z-index: 4;

@@ -165,7 +165,7 @@ function initElements(element) {
 		*/
 		if ($('html').hasClass('html-mobile-opened')) {
 			if (!$(e.target).closest('.menu-holder').length) {
-				$('nav .close').click();
+				$('header>.close').click();
 			}
 		}
 
@@ -180,7 +180,7 @@ function initElements(element) {
 		}
 		if ($('html').hasClass('html-mobile-opened')) {
 			if (key == 27) {
-				$('nav .close').click();
+				$('header>.close').click();
 			}
 		}
 	});
@@ -257,12 +257,11 @@ function parseUrl(url) {
 function showModal(modal_id, dontHideOthers) {
 	var $modal = $('#' + modal_id);
 
-	if (typeof(dontHideOthers) == 'undefined' || !dontHideOthers) $('.modal-wrapper:visible').not($modal).attr('data-transparent', true).stop().animate({'opacity': 0}, __animationSpeed);
+	if (typeof(dontHideOthers) == 'undefined' || !dontHideOthers) $('.modal-wrapper:visible').not($modal).attr('data-transparent', true).stop().animate({'opacity': 0}, __animationSpeed, function() {
+			$(this).hide().css('opacity', 1);
+		});
 
 	var display = __isMobileTablet ? 'block' : 'table';
-	if (modal_id == 'modal-geo' && __isMobileTablet && !__isMobileTabletMiddle) {
-		display = 'table';
-	}
 
 	$('.modal-fadeout').stop().fadeIn(300);
 	$modal.stop().fadeIn(450).css({
@@ -746,16 +745,18 @@ function _scrollTo(target, offset) {
 		}
 
 		// PROJECTS
-		if ($('.projects .slider').length && false) {
+		if ($('.projects .slider').length) {
 			$('.projects .slider').each(function(index, slider) {
-				var sliderAutoSeconds = $('slider').attr('data-autochange-interval-sec');
-				var $items = $('#slider>.slide');
-				var $navItems = $('#slider .nav>li');
+				var sliderAutoSeconds = $(slider).attr('data-autochange-interval-sec');
+				var $items = $(slider).find('.slide');
+				var $navItems = $(slider).find('.slider-dots>.dot');
 				var sliderTid;
 				$(slider).data('indexCurr', 0);
 
 				function projectsSliderSlide(slider, indexNext) {
-					var $items = $(slider).children('.slide');
+					var $items = $(slider).find('.slide');
+					var $navItems = $(slider).find('.slider-dots>.dot');
+
 					var indexCurr = $(slider).data('indexCurr');
 					if (typeof(indexNext) == 'undefined') {
 						indexNext = (indexCurr < ($items.length - 1)) ? (indexCurr - 0 + 1) : 0;
@@ -766,12 +767,15 @@ function _scrollTo(target, offset) {
 					$items.eq(indexCurr).removeClass('active');
 					$items.eq(indexNext).addClass('active');
 
+					$navItems.eq(indexCurr).removeClass('dot-active');
+					$navItems.eq(indexNext).addClass('dot-active');
+
 					$(slider).data('indexCurr', indexNext);
 				}
 
 				function projectsSliderAutoSet(slider) {
 					sliderTid = setInterval(function() {
-						projectsSliderSlide(1, slider);
+						projectsSliderSlide(slider);
 					}, sliderAutoSeconds * 1000);
 				}
 
@@ -787,18 +791,24 @@ function _scrollTo(target, offset) {
 					},
 					swipeRight: function() {
 						projectsSliderAutoHold(slider);
-						projectsSliderSlide(-1);
+						projectsSliderSlide(slider, -1);
 					},
 					threshold: 35
 				});
 
-				$(slider).find('.nav-btn>.prev').click(function() {
-					projectsSliderAutoHold();
-					projectsSliderSlide(-1);
+				$(slider).find('.prev').click(function() {
+					projectsSliderAutoHold(slider);
+					projectsSliderSlide(slider, -1);
 				});
-				$(slider).find('.nav-btn>.next').click(function() {
-					projectsSliderAutoHold();
-					projectsSliderSlide();
+				$(slider).find('.next').click(function() {
+					projectsSliderAutoHold(slider);
+					projectsSliderSlide(slider);
+				});
+
+				$navItems.click(function(e) {
+					e.preventDefault();
+					projectsSliderAutoHold(slider);
+					projectsSliderSlide(slider, $navItems.index($(this)));
 				});
 
 				$items.on({
@@ -813,6 +823,24 @@ function _scrollTo(target, offset) {
 				projectsSliderAutoSet(slider);
 			});
 		}
+
+		// FIXME DEMO
+		$('#modal-consultation form, #modal-feedback form').submit(function(e) {
+			e.preventDefault();
+
+			showModal('modal-done');
+			return false;
+		});
+
+		 // FIXME DEMO
+		 $('#contacts .contact-form form').submit(function(e) {
+		 	e.preventDefault();
+
+		 	$('#contacts .contact-form').hide();
+		 	$('#contacts .text-form').stop().fadeIn(__animationSpeed);
+		 	return false;
+
+		 });
 
 	})
 })(jQuery)

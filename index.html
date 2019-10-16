@@ -15,7 +15,7 @@
 	<meta name="msapplication-config" content="assets/images/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
     <title>isDesign</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?1">
 </head>
 <body>
   <div class="layout" id="layout">
@@ -159,13 +159,14 @@
                     <li><a href="#projects-overhaul">Капитальный ремонт</a></li>
                 </ul>
             </div>
+
             <div class="slider active" id="projects-interior-design" data-autochange-interval-sec="3">
                 <ul>
-                    <li class="active" style="background-image: url('assets/images/projects1.png');"></li>
-                    <li style="background-image: url('assets/images/projects2.png');"></li>
-                    <li style="background-image: url('assets/images/projects3.png');"></li>
-                    <li style="background-image: url('assets/images/projects4.png');"></li>
-                    <li style="background-image: url('assets/images/projects5.png');"></li>
+                    <li class="slide active" style="background-image: url('assets/images/projects1.png');"></li>
+                    <li class="slide" style="background-image: url('assets/images/projects2.png');"></li>
+                    <li class="slide" style="background-image: url('assets/images/projects3.png');"></li>
+                    <li class="slide" style="background-image: url('assets/images/projects4.png');"></li>
+                    <li class="slide" style="background-image: url('assets/images/projects5.png');"></li>
                 </ul>
                 <div class="nav-btn prev"><img class="arrow" src="assets/images/projects-left-arrow.svg" alt="#"></div>
                 <div class="nav-btn next"><img class="arrow" src="assets/images/projects-right-arrow.svg" alt="#"></div>
@@ -177,13 +178,14 @@
                     <span class="dot"><i></i></span>
                 </div>
             </div>
+
             <div class="slider" id="projects-construction" data-autochange-interval-sec="3">
                 <ul>
-                    <li class="active" style="background-image: url('assets/images/projects2.png');"></li>
-                    <li style="background-image: url('assets/images/projects1.png');"></li>
-                    <li style="background-image: url('assets/images/projects3.png');"></li>
-                    <li style="background-image: url('assets/images/projects4.png');"></li>
-                    <li style="background-image: url('assets/images/projects5.png');"></li>
+                    <li class="slide active" style="background-image: url('assets/images/projects2.png');"></li>
+                    <li class="slide" style="background-image: url('assets/images/projects1.png');"></li>
+                    <li class="slide" style="background-image: url('assets/images/projects3.png');"></li>
+                    <li class="slide" style="background-image: url('assets/images/projects4.png');"></li>
+                    <li class="slide" style="background-image: url('assets/images/projects5.png');"></li>
                 </ul>
                 <div class="nav-btn prev"><img class="arrow" src="assets/images/projects-left-arrow.svg" alt="#"></div>
                 <div class="nav-btn next"><img class="arrow" src="assets/images/projects-right-arrow.svg" alt="#"></div>
@@ -195,13 +197,14 @@
                     <span class="dot"><i></i></span>
                 </div>
             </div>
+
             <div class="slider" id="projects-overhaul" data-autochange-interval-sec="3">
                     <ul>
-                        <li class="active" style="background-image: url('assets/images/projects3.png');"></li>
-                        <li style="background-image: url('assets/images/projects2.png');"></li>
-                        <li style="background-image: url('assets/images/projects1.png');"></li>
-                        <li style="background-image: url('assets/images/projects4.png');"></li>
-                        <li style="background-image: url('assets/images/projects5.png');"></li>
+                        <li class="slide active" style="background-image: url('assets/images/projects3.png');"></li>
+                        <li class="slide" style="background-image: url('assets/images/projects2.png');"></li>
+                        <li class="slide" style="background-image: url('assets/images/projects1.png');"></li>
+                        <li class="slide" style="background-image: url('assets/images/projects4.png');"></li>
+                        <li class="slide" style="background-image: url('assets/images/projects5.png');"></li>
                     </ul>
                 <div class="nav-btn prev"><img class="arrow" src="assets/images/projects-left-arrow.svg" alt="#"></div>
                 <div class="nav-btn next"><img class="arrow" src="assets/images/projects-right-arrow.svg" alt="#"></div>
@@ -365,7 +368,7 @@
                     <input required type="tel" name="tel" maxlength="255" value="" data-mask="tel" placeholder="Телефон">
                     <textarea class="js-autoheight" required type="text" name="question" value="" placeholder="Вопрос коротко"></textarea>
                     <div class="cb-line"><input type="checkbox" name="agree" id="modal-target-agree"><label for="modal-target-agree">Я даю согласие на обработку своих<br/><u><a href="privacy-policy.html">персональных данных</a></u></label></div>
-                    <button class="btn" onclick="showModal('#modal-done'); return false;">Отправить</button>
+                    <button class="btn">Отправить</button>
                 </form>
             </div>
         </div>
