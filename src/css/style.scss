@@ -798,8 +798,10 @@ main {
                         content: "";
                         position: absolute;
                         background-image: url('../images/left-arrow.svg');
-                        width: 19px;
-                        height: 8px;
+                        width: 20px;
+                        height: 10px;
+                        top: 50%;
+                        margin-top: -5px;
                     }
                     &:hover {
                         background-color: $color-hover-link;
@@ -809,10 +811,8 @@ main {
                             position: absolute;
                             background-image: url('../images/left-arrow-white.svg');
                             background-repeat: no-repeat;
-                            width: 19px;
+                            width: 20px;
                             height: 10px;
-                            top: 19px;
-                            left: 14px;
 
                         }
                     }
@@ -824,8 +824,10 @@ main {
                         content: "";
                         position: absolute;
                         background-image: url('../images/right-arrow.svg');
-                        width: 19px;
-                        height: 8px; 
+                        width: 20px;
+                        height: 10px; 
+                        top: 50%;
+                        margin-top: -5px;
                     }        
                     &:hover {
                         background-color: $color-hover-link;
@@ -835,10 +837,8 @@ main {
                             position: absolute;
                             background-image: url('../images/right-arrow-white.svg');
                             background-repeat: no-repeat;
-                            width: 19px;
+                            width: 20px;
                             height: 10px;
-                            top: 19px;
-                            right: 14px;
 
                         }
                     }                     
@@ -1612,6 +1612,7 @@ section {
             .slick-arrow {
                 width: 47px;
                 height: 47px;
+                padding: 20px 14px;
                 border: 1px solid #DCCA9D;        
                 background: inherit;
                 position: absolute;
@@ -1633,7 +1634,7 @@ section {
                         content: "";
                         position: absolute;
                         background-image: url('../images/left-arrow.svg');
-                        width: 19px;
+                        width: 20px;
                         height: 10px; 
                     }
                     &:hover {
@@ -1644,10 +1645,8 @@ section {
                             position: absolute;
                             background-image: url('../images/left-arrow-white.svg');
                             background-repeat: no-repeat;
-                            width: 19px;
+                            width: 20px;
                             height: 10px;
-                            top: 17px;
-                            left: 13px;
 
                         }
                     }
@@ -1659,7 +1658,7 @@ section {
                         content: "";
                         position: absolute;
                         background-image: url('../images/right-arrow.svg');
-                        width: 19px;
+                        width: 20px;
                         height: 10px; 
                     } 
                     &:hover {
@@ -1670,10 +1669,8 @@ section {
                             position: absolute;
                             background-image: url('../images/right-arrow-white.svg');
                             background-repeat: no-repeat;
-                            width: 19px;
+                            width: 20px;
                             height: 10px;
-                            top: 17px;
-                            right: 14px;
 
                         }
                     }
@@ -2684,8 +2681,6 @@ section {
                         background-repeat: no-repeat;
                         width: 19px;
                         height: 10px;
-                        top: 18px;
-                        left: 13px;
 
                     }
                 }
@@ -2708,8 +2703,6 @@ section {
                         background-repeat: no-repeat;
                         width: 19px;
                         height: 10px;
-                        top: 18px;
-                        right: 14px;
 
                     }
                 }
