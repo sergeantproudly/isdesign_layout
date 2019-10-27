@@ -601,13 +601,9 @@ function _scrollTo(target, offset) {
 
 				$('body').addClass('mobile-opened');
 
-				if ($('header>.holder').outerHeight() > $(window).height()) {
-					$('html').addClass('html-mobile-long');
-				} else {
-					$('html').removeClass('html-mobile-long');
-				}
-
-				$('#layout').addClass('js-modal-overflow').height($('header').outerHeight());
+				var padds = parseInt($('header').css('padding-top')) + parseInt($('header').css('padding-bottom'));
+				$('html').toggleClass('html-mobile-long', $('#menu-holder').outerHeight() + padds > $(window).height());
+				$('#layout').addClass('js-modal-overflow').height($('#menu-holder').outerHeight() + padds - 2);
 
 				//$('.modal-fadeout').stop().fadeIn(300);
 			}
@@ -618,7 +614,6 @@ function _scrollTo(target, offset) {
 				if (!$(this).parent().hasClass('opened')) {
 					$(this).parent().addClass('opened').children('ul').stop().slideDown(__animationSpeed, function() {
 						var padds = parseInt($('header').css('padding-top')) + parseInt($('header').css('padding-bottom'));
-						console.log($('header>.holder').css('padding-top'));
 						$('html').toggleClass('html-mobile-long', $('#menu-holder').outerHeight() + padds > $(window).height());
 						$('#layout').addClass('js-modal-overflow').height($('#menu-holder').outerHeight() + padds - 2);
 					});
